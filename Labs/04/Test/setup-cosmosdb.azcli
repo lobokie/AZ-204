@@ -1,0 +1,12 @@
+rnd=$RANDOM
+dbname=cosmos$rnd
+dbkind=GlobalDocumentDB
+grp=az204-functs-$rnd
+loc=westeurope
+
+az group create --name $grp --location $loc
+
+az cosmosdb create \
+    --name $dbname \
+    --kind $dbkind \
+    --resource-group $grp

@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"azureFunctions.pythonVenv": "/Users/wolfgang.kiesenhofer/Projects/Training-AZ-204/.venv",
+		"debug.internalConsoleOptions": "neverOpen"
+	}
+}
