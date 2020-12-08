@@ -17,3 +17,6 @@ bld/
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
 .vs/
+.vscode
+.venv
+.DS_Store
