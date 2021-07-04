@@ -1,9 +1,9 @@
 # rnd=$RANDOM
-rnd=007
+rnd=118
 grp=az204-cdn-$rnd
 loc=westeurope
 acct=staticwebsite$rnd
-path='./HelloAzureCDN/dist/HelloAzureCDN'
+path='./FoodUI/dist/FoodUI'
 
 az group create -n $grp -l $loc
 

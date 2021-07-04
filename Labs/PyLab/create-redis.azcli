@@ -1,0 +1,15 @@
+rnd=$RANDOM
+grp=rg-az-204-redis
+loc=westeurope
+cacheName=AZ204-Training
+vault=foodvault-117
+
+az group create -n $grp -l $loc
+
+az redis create -l $loc -n $cacheName -g $grp --sku Standard --vm-size c0
+
+key=$(az redis list-keys -n $cacheName  -g $grp --query primaryKey)                 
+
+echo "Use this to create UserSecret: dotnet user-secrets set CacheConnection $cacheName.redis.cache.windows.net,abortConnect=false,ssl=true,password=$key"
+
+az keyvault secret set --vault-name $vault --name "AZ204-Training" --value $key
